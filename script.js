@@ -44,16 +44,23 @@ const lines = [
 ];
 
 let index = 0;
+
 const terminal = document.getElementById("terminalText");
 const ghost = document.getElementById("ghostTitle");
+const goalsContainer = document.getElementById("goalsContainer");
 
-setInterval(() => {
-    terminal.textContent = lines[index];
-    index = (index + 1) % lines.length;
-}, 250);
+/* TERMINAL */
+if (terminal) {
+    setInterval(() => {
+        terminal.textContent = lines[index];
+        index = (index + 1) % lines.length;
+    }, 250);
+}
 
+/* NAV */
 function scrollToSection(id) {
-    document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: "smooth" });
 }
 
 function openGithub() {
@@ -64,10 +71,22 @@ function openAbout() {
     window.location.href = "about.html";
 }
 
-function randomGlitch() {
-    const chance = Math.random();
+function openIdentity() {
+    window.location.href = "identity.html";
+}
 
-    if (chance > 0.7) {
+function openGhostRepo() {
+    window.open("https://github.com/BitThzn/SYSTEM-GHOST", "_blank");
+}
+
+function openComingSoon(projectName) {
+    window.location.href = `coming.html?project=${projectName}`;
+}
+
+function randomGlitch() {
+    if (!ghost) return;
+
+    if (Math.random() > 0.7) {
         ghost.classList.add("glitch");
 
         setTimeout(() => {
@@ -77,10 +96,6 @@ function randomGlitch() {
 }
 
 setInterval(randomGlitch, 800);
-
-function openIdentity() {
-    window.location.href = "identity.html";
-}
 
 const goals = [
     "BECOME AN ELITE PROGRAMMER",
@@ -93,36 +108,33 @@ const goals = [
     "BUILD REAL FRIENDSHIPS"
 ];
 
-const container = document.getElementById("goalsContainer");
-
 function loadGoals() {
+    if (!goalsContainer) return;
+
     let i = 0;
 
     const interval = setInterval(() => {
-
         if (i < goals.length) {
-
             const line = document.createElement("div");
             line.classList.add("goal-line");
             line.textContent = ">> " + goals[i];
 
-            container.appendChild(line);
+            goalsContainer.appendChild(line);
 
-            setTimeout(() => {
+            requestAnimationFrame(() => {
                 line.classList.add("show");
-            }, 100);
+            });
 
             i++;
-
         } else {
             clearInterval(interval);
 
             const done = document.createElement("div");
             done.classList.add("goal-loading");
             done.textContent = "MISSION DATA FULLY LOADED";
-            container.appendChild(done);
-        }
 
+            goalsContainer.appendChild(done);
+        }
     }, 600);
 }
 
