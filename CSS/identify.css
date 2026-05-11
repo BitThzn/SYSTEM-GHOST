@@ -1,0 +1,266 @@
+
+/* Configuração principal da pagina */
+
+.identity-system {
+  min-height: 100vh;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 30px;
+  background:
+    radial-gradient(circle at center, rgba(255, 0, 0, 0.08), transparent 60%),
+    #050505;
+}
+
+/* Configuração do header */
+.system-header {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 12px;
+  opacity: 0.6;
+  letter-spacing: 2px;
+}
+
+/* config do dossie principal*/
+.dossier-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 800px;
+  width: 100%;
+}
+
+/* Config de todas as caixas */
+.dossier-box {
+  border: 1px solid rgba(255, 26, 26, 0.4);
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
+  height: 400px;
+  backdrop-filter: blur(6px);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* box objetivos */
+.dossier-box-obj {
+  border: 1px solid rgba(255, 26, 26, 0.4);
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
+  height: 400px;
+  backdrop-filter: blur(6px);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.goal-line {
+  font-size: 15px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: 0.4s ease;
+  text-shadow: 0 0 5px #ff0000;
+}
+
+.goal-line.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.goal-loading {
+  font-size: 12px;
+  opacity: 0.6;
+  margin-bottom: 10px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0.2
+  }
+
+  50% {
+    opacity: 0.8
+  }
+
+  100% {
+    opacity: 0.2
+  }
+}
+
+/* box  target vilt  */
+.dossier-box-trg {
+  border: 1px solid rgba(255, 26, 26, 0.4);
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
+  height: 300px;
+  backdrop-filter: blur(6px);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Config da target */
+
+.target-status {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 12px;
+  color: #ff1a1a;
+  opacity: 0.7;
+  animation: blink 1s infinite;
+  letter-spacing: 2px;
+}
+
+/* Animação da target */
+@keyframes blink {
+  0% {
+    opacity: 0.2
+  }
+
+  50% {
+    opacity: 1
+  }
+
+  100% {
+    opacity: 0.2
+  }
+}
+
+/* Img target */
+.target-image {
+  width: 100%;
+  height: 220px;
+  position: relative;
+  overflow: hidden;
+  border: 1px dashed rgba(255, 0, 0, 0.4);
+}
+
+/*config da target*/
+.target-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: contrast(1.1) brightness(0.85);
+}
+
+/*Configuração da animação da target*/
+.scan-line {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(to bottom,
+      transparent,
+      rgba(255, 0, 0, 0.4),
+      transparent);
+  animation: scan 2.5s infinite;
+}
+
+/* Animação da Target */
+@keyframes scan {
+  0% {
+    top: -40%
+  }
+
+  50% {
+    top: 100%
+  }
+
+  100% {
+    top: 100%
+  }
+}
+
+/* config targt */
+.target-mission {
+  font-size: 13px;
+  margin-top: 10px;
+  opacity: 0.85;
+  text-shadow: 0 0 5px #ff0000;
+}
+
+/* box de informações basicas */
+.dossie-box-info {
+  border: 1px solid rgba(255, 26, 26, 0.4);
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
+  height: 300px;
+  backdrop-filter: blur(6px);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* box titulo */
+.box-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  text-shadow: 0 0 10px #ff0000;
+}
+
+
+.line {
+  font-size: 13px;
+  opacity: 0.85;
+}
+
+/* Configuração da caixa de foto */
+.photo-box {
+  align-items: center;
+  justify-content: center;
+}
+
+/* Configuração da localização da foto */
+.photo-placeholder {
+  width: 100%;
+  height: 430px;
+  border: 1px dashed rgba(255, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Configuração da foto */
+.photo-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: contrast(1.1) brightness(0.9);
+}
+
+/* Botão para voltar para pagina principal */
+.return-core {
+  padding: 10px 18px;
+  background: transparent;
+  border: 1px solid #ff1a1a;
+  color: #ff1a1a;
+  cursor: pointer;
+  font-family: 'Share Tech Mono', monospace;
+  transition: 0.3s;
+}
+
+/* Animação do Botão para voltar para pagina principal */
+.return-core:hover {
+  background: #ff1a1a;
+  color: #050505;
+  box-shadow: 0 0 20px #ff0000;
+  transform: scale(1.05);
+}
+
+.return-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
