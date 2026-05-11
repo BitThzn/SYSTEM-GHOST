@@ -1,0 +1,236 @@
+
+.project-system {
+  min-height: 100vh;
+  padding: 40px;
+  background:
+    radial-gradient(circle at center, rgba(255, 0, 0, 0.05), transparent 60%),
+    #050505;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  position: relative;
+}
+
+.close-button {
+  position: absolute;
+  top: 25px;
+  right: 30px;
+
+  width: 42px;
+  height: 42px;
+
+  background: transparent;
+  border: 1px solid rgba(255, 26, 26, 0.4);
+
+  color: #ff1a1a;
+
+  font-size: 28px;
+  font-family: 'Orbitron', sans-serif;
+  line-height: 42px;
+  text-align: center;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+
+  z-index: 9999;
+}
+
+.close-button:hover {
+  background: #ff1a1a;
+  color: #050505;
+  box-shadow: 0 0 20px #ff0000;
+}
+
+.system-header {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 13px;
+  opacity: 0.6;
+  letter-spacing: 2px;
+}
+
+.project-layout {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 25px;
+  width: 100%;
+  align-items: start;
+}
+
+.project-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+.project-image {
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 26, 26, 0.3);
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.15);
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.85) contrast(1.05);
+}
+
+.project-info,
+.project-description,
+.project-repository {
+  border: 1px solid rgba(255, 26, 26, 0.3);
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.15);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  backdrop-filter: blur(6px);
+}
+
+.info-title,
+.content-title {
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px #ff0000;
+}
+
+.info-title {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.content-title {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.info-line {
+  font-size: 13px;
+  opacity: 0.85;
+}
+
+.project-description p,
+.content-block p {
+  font-size: 14px;
+  line-height: 1.8;
+  opacity: 0.85;
+}
+
+.project-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.content-block {
+  border: 1px solid rgba(255, 26, 26, 0.3);
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.15);
+  padding: 25px;
+  backdrop-filter: blur(6px);
+}
+
+
+
+.repo-button {
+  width: 100%;
+  padding: 12px;
+
+  background: transparent;
+  border: 1px solid #ff1a1a;
+
+  color: #ff1a1a;
+
+  font-family: 'Share Tech Mono', monospace;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.repo-button:hover {
+  background: #2dff1a;
+  border-color: #00FF00;
+  color: #050505;
+  box-shadow: 0 0 20px #09ff00;
+}
+
+.project-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+.visual-nodes-container {
+  width: 100%;
+}
+
+.visual-nodes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  width: 200px;
+}
+
+.node {
+  border: 1px solid rgba(255, 26, 26, 0.3);
+  background: rgba(255, 0, 0, 0.02);
+  transition: 0.3s;
+}
+
+.node:hover {
+  background: rgba(255, 0, 0, 0.1);
+  border-color: #00FF00;
+  box-shadow: 0 0 15px rgba(2, 136, 13, 0.61);
+}
+
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  width: 180px;
+  background-color: #000000;
+  color: #00FF00;
+  border: 1px solid #00FF00;
+
+  text-align: center;
+  border-radius: 4px;
+  padding: 8px;
+  position: absolute;
+  z-index: 1;
+  bottom: 115%;
+  left: 50%;
+  margin-left: -90px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-family: 'Courier New', Courier, monospace;
+  box-shadow: 0px 0px 10px rgba(0, 255, 0, 0.2);
+}
+
+
+.tooltip-container:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+.tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #00FF00 transparent transparent transparent;
+}
