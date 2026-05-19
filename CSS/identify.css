@@ -252,9 +252,10 @@
 
 /* Animação do Botão para voltar para pagina principal */
 .return-core:hover {
-  background: #ff1a1a;
+  background: #00FF00;
   color: #050505;
-  box-shadow: 0 0 20px #ff0000;
+  border: #00FF00;
+  box-shadow: 0 0 20px #00FF00;
   transform: scale(1.05);
 }
 

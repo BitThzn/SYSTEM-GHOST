@@ -140,7 +140,8 @@ body {
 
 .project-box:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0 25px rgba(255, 0, 0, 0.5);
+  border-color: #00FF00;
+  box-shadow: 0 0 15px rgba(2, 136, 13, 0.61);
 }
 
 .project-title {
