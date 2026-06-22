@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SYSTEM://DASHBOARD/PROJECT</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Share+Tech+Mono&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="../CSS/style.css">
+  <link rel="stylesheet" href="../CSS/projects.css">
+  <link rel="stylesheet" href="../CSS/imageViewer.css">
+</head>
+
+<body>
+
+  <section class="project-system">
+
+    <button class="close-button" onclick="returnToCore()"> × </button>
+
+    <div class="system-header">
+      SYSTEM://GHOST/PROJECTS/SYSTEM-DASHBOARD
+    </div>
+
+    <div class="project-layout">
+
+      <aside class="project-sidebar">
+
+        <div class="project-image">
+          <img src="../img/SYSTEM-DASHBOARD.jpg" alt="SYSTEM://DASHBOARD">
+        </div>
+
+        <div class="project-info">
+          <div class="info-title">PROJECT STATUS</div>
+          <div class="info-line">STATUS: ACTIVE</div>
+          <div class="info-line">TYPE: FULL STACK PLATFORM</div>
+          <div class="info-line">STARTED: 02/06/2026</div>
+          <div class="info-line">VERSION: 1.0.0</div>
+        </div>
+
+        <div class="project-description">
+          <div class="info-title">DESCRIPTION</div>
+
+          <p>
+            SYSTEM://DASHBOARD is a full stack management platform
+            developed to centralize project information, monitor
+            development progress and organize operational data.
+          </p>
+
+          <p>
+            The project combines React, Spring Boot and MySQL
+            to provide a scalable environment focused on project
+            administration and workflow organization.
+          </p>
+
+          <p>
+            Inspired by the cyberpunk aesthetics of the
+            SYSTEM://GHOST ecosystem, the platform merges
+            functionality with immersive interface design.
+          </p>
+
+          <p>
+            The dashboard serves as both a practical management
+            tool and a learning environment for full stack
+            software engineering.
+          </p>
+
+        </div>
+
+        <div class="project-repository">
+          <div class="info-title">REPOSITORY ACCESS</div>
+
+          <button class="repo-button" onclick="openSystemDashboardRepo()">
+            ACCESS GITHUB REPOSITORY
+          </button>
+
+        </div>
+
+      </aside>
+
+      <main class="project-content">
+
+        <div class="content-block">
+
+          <div class="content-title">
+            SYSTEM OVERVIEW
+          </div>
+
+          <p>
+            SYSTEM://DASHBOARD was designed as a centralized
+            management environment responsible for organizing,
+            monitoring and presenting project information
+            inside a unified interface.
+          </p>
+
+          <p>
+            The platform allows active and archived projects
+            to be managed efficiently through a structured
+            dashboard system.
+          </p>
+
+          <p>
+            Unlike conventional dashboards focused solely on
+            statistics, this project combines administration
+            tools with a distinctive cyberpunk visual identity.
+          </p>
+
+          <p>
+            The system is intended to evolve continuously,
+            expanding alongside future projects and integrations
+            within the SYSTEM://GHOST network.
+          </p>
+
+        </div>
+
+        <div class="content-block">
+
+          <div class="content-title">
+            ARCHITECTURE
+          </div>
+
+          <p>
+            SYSTEM://DASHBOARD follows a client-server
+            architecture designed around modern software
+            engineering principles.
+          </p>
+
+          <p>
+            The front-end is built with React, providing
+            a modular component-based structure capable
+            of scaling with future requirements.
+          </p>
+
+          <p>
+            Spring Boot powers the backend layer,
+            handling business logic, API communication
+            and application services.
+          </p>
+
+          <p>
+            MySQL is responsible for data persistence,
+            ensuring reliable storage and retrieval of
+            project information.
+          </p>
+
+          <p>
+            The architecture was designed with future
+            expansion in mind, supporting analytics,
+            authentication systems and advanced management
+            features.
+          </p>
+
+        </div>
+
+        <div class="content-block">
+
+          <div class="content-title">
+            DEVELOPMENT STATUS
+          </div>
+
+          <p>
+            The platform currently includes the core
+            dashboard interface, backend services and
+            database integration required for project
+            management operations.
+          </p>
+
+          <p>
+            Core functionalities such as project tracking,
+            status monitoring and API communication are
+            already operational.
+          </p>
+
+          <p>
+            Current development efforts focus on usability
+            improvements, interface refinement and feature
+            expansion.
+          </p>
+
+          <p>
+            Future versions will introduce authentication,
+            advanced analytics, project metrics and deeper
+            integration with the SYSTEM://GHOST ecosystem.
+          </p>
+
+        </div>
+
+        <div class="content-block">
+
+          <div class="content-title">
+            OBJECTIVES
+          </div>
+
+          <p>
+            The primary objective of this project is to
+            strengthen my full stack development skills
+            through the creation of a complete management
+            platform.
+          </p>
+
+          <p>
+            It serves as a practical environment for
+            learning software architecture, database
+            integration, API development and modern
+            frontend engineering.
+          </p>
+
+          <p>
+            Every new feature contributes directly to
+            improving both technical knowledge and the
+            overall quality of the platform.
+          </p>
+
+          <p>
+            The long-term goal is to transform
+            SYSTEM://DASHBOARD into a fully operational
+            management environment capable of supporting
+            real-world projects and workflows.
+          </p>
+
+        </div>
+
+        <div class="content-block">
+
+          <section class="visual-nodes-container">
+
+            <div class="content-title">
+              VISUAL
+            </div>
+
+            <div class="visual-nodes">
+
+              <div class="node tooltip-container">
+
+                <img src="../img/dashboard1.png"
+                  alt="Dashboard"
+                  style="width: 465px; height: 100%;"
+                  onclick="openViewer(this.src)">
+
+                <span class="tooltip-text">
+                  Main dashboard interface
+                </span>
+
+              </div>
+
+              <div class="node tooltip-container">
+
+                <img src="../img/dashboard2.png"
+                  alt="Projects"
+                  style="width: 465px; height: 100%;"
+                  onclick="openViewer(this.src)">
+
+                <span class="tooltip-text">
+                  Project Editing Terminal
+                </span>
+
+              </div>
+
+              <div class="node tooltip-container">
+
+                <img src="../img/dashboard3.png"
+                  alt="Statistics"
+                  style="width: 465px; height: 100%;"
+                  onclick="openViewer(this.src)">
+
+                <span class="tooltip-text">
+                  Project Termination Interface
+                </span>
+
+              </div>
+
+            </div>
+
+          </section>
+
+        </div>
+
+      </main>
+
+    </div>
+
+  </section>
+
+  <div class="viewer hidden" id="viewer">
+
+    <div class="viewer-window">
+
+      <div class="viewer-topbar">
+
+        <span>SYSTEM://IMAGE_VIEWER.exe</span>
+
+        <div class="viewer-buttons">
+          <button onclick="closeViewer()">X</button>
+        </div>
+
+      </div>
+
+      <div class="viewer-content">
+
+        <div class="loading" id="loading">
+
+          <p>> INITIALIZING IMAGE STREAM...</p>
+
+          <div class="bar">
+            <div class="fill"></div>
+          </div>
+
+        </div>
+
+        <img id="viewerImage">
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="../JS/navigation.js"></script>
+  <script src="../JS/imageViewer.js"></script>
+
+</body>
+
+</html>
+
+
+<!-- ~Ghost, The Shadow~ -->
